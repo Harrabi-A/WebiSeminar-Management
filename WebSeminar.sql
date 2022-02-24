@@ -31,6 +31,7 @@ CREATE TABLE WEBINAR(
 CREATE TABLE PARTICIPATIONSEMINAR(
 	email varchar(32),
 	id int,
+	primary key (email,id),
 	foreign key (email) references USER(email),
 	foreign key (id) references SEMINAR(id)
 );
@@ -38,6 +39,7 @@ CREATE TABLE PARTICIPATIONSEMINAR(
 CREATE TABLE PARTICIPATIONWEBINAR(
 	email varchar(32),
 	id int,
+	primary key (email,id),
 	foreign key (email) references USER(email),
 	foreign key (id) references WEBINAR(id)
 );
