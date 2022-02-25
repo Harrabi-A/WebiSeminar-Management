@@ -10,4 +10,4 @@
    header("Location: login.php");
  }
 
- ?>
+?>
