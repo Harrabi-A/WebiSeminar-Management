@@ -13,6 +13,8 @@ CREATE TABLE USER(
 CREATE TABLE SEMINAR(
 	id int auto_increment,
 	date date,
+	title varchar(64),
+	description  varchar(128),
 	manager varchar(32) NOT NULL,
 	Place varchar(32),
 	primary key (id),
@@ -22,6 +24,8 @@ CREATE TABLE SEMINAR(
 CREATE TABLE WEBINAR(
 	id int auto_increment,
 	date date,
+	title varchar(64),
+	description  varchar(128),
 	manager varchar(32) NOT NULL,
 	link varchar(128),
 	primary key (id),
@@ -31,7 +35,6 @@ CREATE TABLE WEBINAR(
 CREATE TABLE PARTICIPATIONSEMINAR(
 	email varchar(32),
 	id int,
-	primary key (email,id),
 	foreign key (email) references USER(email),
 	foreign key (id) references SEMINAR(id)
 );
