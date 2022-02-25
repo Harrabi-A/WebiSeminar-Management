@@ -1,4 +1,19 @@
-</html>
+<?php
+session_start();
+
+if (isset($_SESSION['username'])) {
+ 
+   // user is set
+	header("Location: index.php");
+ 
+
+ } else {
+   
+ }
+
+?>
+
+<html>
 <head>
       <title>   WebSeminar Reservation    </title>
     <link rel="stylesheet" href="style.css">
@@ -11,9 +26,10 @@
             </div>
             <div class="menu">
            	    <ul>
-           		    <li><a href="#">Seminar</a></li>
-           		    <li><a href="#">Webinar</a></li>
-                    <li><a href="#">About</a></li>
+           		    <li><a href="seminar.php">Seminar</a></li>
+           		    <li><a href="webinar.php">Webinar</a></li>
+                    <li><a href="project.php">Project</a></li>
+                    <li><a href="signup.php">Singup</a></li>
                 </ul>
             </div>
         </div>
@@ -21,7 +37,7 @@
         	<form action="" method="post">
         		<div id="login">
         		<h3>Login</h3><br>
-        		<input type="text" name="username" placeholder="Enter your username"><br><br>
+        		<input type="text" name="username" placeholder="Enter your email"><br><br>
         		<input type="text" name="password" placeholder="Enter your password"><br><br>
         		<button class="btn"></a>Login</button>
         		</div>
@@ -33,5 +49,7 @@
     </div>
       
        
+</body>
+</html>     
 </body>
 </html>
