@@ -46,7 +46,7 @@ ul {
 
 ul li {
 	list-style: none;
-	margin-left: 200px;
+	margin-left: 150px;
 	margin-top: 32px;
 	font-size:14px;
 }
@@ -70,12 +70,18 @@ ul li a:hover{
 	font-family: "Baskerville", sans-serif;
 }
 
+#signup{
+	color: #fff;
+	background-color: #fff;
+	font-size: 20px;
+	font-family: "Baskerville", sans-serif;
+}
 
 .form{
-	margin-top: 100px;
+	margin-top: 200px;
 	margin-left: 100px;
 	width: 250px;
-	height: 300px;
+	height: 320px;
 	background-color: #fff;
 	position: absolute;
 	top: -20px;
@@ -102,4 +108,60 @@ button {
 	padding: 8px;
 	background-color: #787e8a;
 	color: #fff;
+}
+
+.introduction{
+	width: 400px;
+	height: 100px;
+	margin-top: 500px
+	margin-right:200px;
+	top: 250px;
+	left: 80px;
+	position: absolute;
+	color: #fff;
+	font-size: 22px;
+	font-family: "Baskerville", sans-serif;
+}
+
+#project{
+	width: 400px;
+	height: 100px;
+	margin-top: 500px
+	margin-right:200px;
+	top: 250px;
+	left: 80px;
+	position: absolute;
+	color: #fff;
+	font-size: 22px;
+	font-family: "Baskerville", sans-serif;
+}
+
+a{
+	color: #fff;
+}
+
+a:hover {
+  color: #b20202;
+}
+
+h4{
+	margin-top: 500px
+	margin-right:200px;
+	top: 100px;
+	left: 80px;
+	position: absolute;
+	color: #fff;
+	font-size: 22px;
+	font-family: "Baskerville", sans-serif;
+}
+
+table,th,td{
+	margin-top: 200px;
+	margin-left: 100px;
+	width: 80%;
+	color: #263759;
+    border: 4px solid #fff;
+    border-collapse: collapse;
+    background-color: #787e8a;
+    table-layout: fixed;
 }
