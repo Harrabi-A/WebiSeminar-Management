@@ -4,9 +4,7 @@
  if (isset($_SESSION['user'])) {
  
    //check ifuser is logged
- 	include("functions.php");
  	/*$SEMINAR = getSeminars();*/
- 
 
  } else {
     /*header("Location: login.php");*/
@@ -32,12 +30,21 @@
                     <li><a href="seminar.php">Seminar</a></li>
                     <li><a href="webinar.php">Webinar</a></li>
                     <li><a href="project.php">Project</a></li>
+                    <?php 
+                    if (isset($_SESSION['user'])) {
+                    ?>
+                       <li><a href="home.php">Home</a></li> 
+                    <?php
+                    } else{
+                    ?>
                     <li><a href="login.php">Login</a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
         <div class="content">
         	<h4>Seminar</h4>
+            <form action="participate.php" method="post">
 		    <table>
 			<tr>
 				<th>ID</th>
@@ -46,7 +53,7 @@
 				<th>Description</th>
 				<th>Manager</th>
 				<th>Place</th>
-
+            </tr>
 
 
 				<?php
@@ -57,31 +64,33 @@
                 // Create connection
                 $conn = mysqli_connect($host,$user,$password,$database);
 
-                function getSeminars(){
+            
     	        $query = "SELECT * FROM SEMINAR";
     	        $result = mysqli_query($conn,$query);
-    	        $arraySeminar = array();
 
-    	        for ($row_no = 0; $row_no <= $result -> mysqli_num_rows; $row_no++){
-    	     	$res -> data_seek($row_no);
-    	     	$row = $res-> fetch_assoc();
-    		    array_push($arraySeminar, $row);
+                ?>
 
-    	        }
+                <?php
+
+				while($rows=mysqli_fetch_assoc($result) ) {
+                ?>
+                <tr> 
+                    <td><?php echo $rows['id']; ?></td>
+                    <td><?php echo $rows['date']; ?></td>
+                    <td><?php echo $rows['title']; ?></td>
+                    <td><?php echo $rows['description']; ?></td>
+                    <td><?php echo $rows['manager']; ?></td>
+                    <td><?php echo $rows['Place']; ?></td>
+                    <td><input type="checkbox" id="<?php $rows['id'];?>"></td>
+                </tr>
+				
+                <?php 
                 }
 
-                echo print_r($arraySeminar);
-                mysqli_close($conn);
-				/*foreach ($arraySeminar as $value) {
-					echo "<th>'$value['$id']'</th>";
-				    echo "<th>'$value['$date']'</th>";
-				    /*echo "<th>Title</th>";
-				    echo "<th>Description</th>";
-				    echo "<th>Manager</th>";
-				    echo "<th>Place</th>";
-				}*/
+                /*mysqli_close($conn);*/
 				?>
 
+                </form>
 
 
 
