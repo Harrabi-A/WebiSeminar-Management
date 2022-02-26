@@ -1,3 +1,8 @@
+<?php
+ session_start();
+ ?>
+
+
 <!DOCTYPE  html>
 
 <html>
@@ -16,7 +21,15 @@
                     <li><a href="seminar.php">Seminar</a></li>
                     <li><a href="webinar.php">Webinar</a></li>
                     <li><a href="project.php">Project</a></li>
+                    <?php 
+                    if (isset($_SESSION['user'])) {
+                    ?>
+                       <li><a href="home.php">Home</a></li> 
+                    <?php
+                    } else{
+                    ?>
                     <li><a href="login.php">Login</a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
