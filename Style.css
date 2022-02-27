@@ -163,5 +163,25 @@ table,th,td{
     border: 4px solid #fff;
     border-collapse: collapse;
     background-color: #787e8a;
-    table-layout: fixed;
+    text-align: center;
+    padding: 15px;
+    table-layout: auto;
+}
+
+.addEvent {
+	margin-top: 500px
+	margin-right:200px;
+	top: 150px;
+	left: 80px;
+	position: absolute;
+	background-color: #fff;
+	font-size: 50;
+	padding-top: 10px;
+	font-family: "Baskerville", sans-serif;
+	color: #787e8a;
+}
+
+.remove{
+	color: #fff;
+	background-color: #b20202;
 }
