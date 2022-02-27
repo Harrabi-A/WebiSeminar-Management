@@ -12,7 +12,7 @@ $database="WebSeminar";
 
 // Establish connection
 $conn = mysqli_connect($host,$user,$password,$database);
-$query= "SELECT * FROM WEBINAR WHERE id='$eventID' AND manager='$email'"; // This Query is used to check if the user how request seminar remove is the manager 
+$query= "SELECT * FROM WEBINAR WHERE id='$eventID' AND manager='$email'"; // This Query is used to check if the user who request seminar remove is the manager 
 $result= mysqli_query($conn,$query);
 if ($rows=mysqli_fetch_assoc($result)) {
 	// the user is tthe manager
