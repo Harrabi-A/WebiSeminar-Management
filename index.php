@@ -3,7 +3,8 @@
 
  if (isset($_SESSION['user'])) {
  
-   //check ifuser is logged
+  /*echo $_SESSION['user'];*/
+  header("Location: home.php");
  
 
  } else {
