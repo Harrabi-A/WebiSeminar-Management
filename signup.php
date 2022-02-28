@@ -4,11 +4,8 @@ session_start();
 if (isset($_SESSION['username'])) {
  
    // user is set
-	header("Location: index.php");
+	header("Location: home.php");
  
-
- } else {
-   
  }
 
 ?>
