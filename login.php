@@ -1,14 +1,10 @@
 <?php
 session_start();
 
-if (isset($_SESSION['username'])) {
- 
-   // user is set
-	header("Location: index.php");
+if (isset($_SESSION['user'])) {
+	header("Location: home.php");
  
 
- } else {
-   
  }
 
 ?>
@@ -34,10 +30,10 @@ if (isset($_SESSION['username'])) {
             </div>
         </div>
         <div class="form">
-        	<form action="" method="post">
+        	<form action="logincheck.php" method="post">
         		<div id="login">
         		<h3>Login</h3><br>
-        		<input type="text" name="username" placeholder="Enter your email"><br><br>
+        		<input type="text" name="email" placeholder="Enter your email"><br><br>
         		<input type="text" name="password" placeholder="Enter your password"><br><br>
         		<button class="btn"></a>Login</button>
         		</div>
@@ -46,10 +42,7 @@ if (isset($_SESSION['username'])) {
         <div>
             <p class="introduction">WebSeminar is a management platform to organize registration for Seminar Event and Webinar Event.</p>
         </div>
-    </div>
-      
+    </div>    
        
-</body>
-</html>     
 </body>
 </html>
