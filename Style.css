@@ -185,3 +185,35 @@ table,th,td{
 	color: #fff;
 	background-color: #b20202;
 }
+
+.newevent{
+	margin-top: 500px
+	margin-right:200px;
+	top: 150px;
+	left: 80px;
+	position: absolute;
+	font-size: 50;
+	padding-top: 10px;
+	font-family: "Baskerville", sans-serif;
+	color: #fff;
+}
+
+.input2{
+	background-color: #fff;
+	color: #787e8a;
+	width: 200px;
+}
+
+.selector{
+	color: #fff;
+	font-family: "Baskerville", sans-serif;
+	font-size: 19px;
+}
+
+.submitEvent{
+	left: 60px;
+	width: 80px;
+	position: absolute;
+	background-color: #276324;
+	color: #fff;
+}
