@@ -29,6 +29,6 @@ if ($_POST['email'] && $_POST['password'] && $_POST['name'] && $_POST['surname']
     	$_SESSION['user']=$email;
     	header("Location: home.php");
     }
-
+    header("Location: signup.php");
 }
 ?>
