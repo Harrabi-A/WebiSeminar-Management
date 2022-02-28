@@ -34,13 +34,13 @@ if (isset($_SESSION['username'])) {
             </div>
         </div>
         <div class="form">
-        	<form action="" method="post">
+        	<form action="newuser.php" method="post">
         		<div id="signup">
         		<h3>Sign-up</h3><br>
-        		<input type="text" name="username" placeholder="Enter your email"><br><br>
-        		<input type="text" name="text" placeholder="Enter your password"><br><br>
-                <input type="text" name="text" placeholder="Enter your name"><br><br>
-                <input type="text" name="text" placeholder="Enter your surname"><br><br>
+        		<input type="text" name="email" placeholder="Enter your email"><br><br>
+        		<input type="text" name="password" placeholder="Enter your password"><br><br>
+                <input type="text" name="name" placeholder="Enter your name"><br><br>
+                <input type="text" name="surname" placeholder="Enter your surname"><br><br>
         		<button class="btn"></a>Sign-up</button>
         		</div>
         	</form>
@@ -49,7 +49,6 @@ if (isset($_SESSION['username'])) {
             <p class="introduction">WebSeminar is a management platform to organize registration for Seminar Event and Webinar Event.</p>
         </div>
     </div>
-      
-       
+             
 </body>
 </html>
