@@ -44,8 +44,12 @@
         </div>
         <div class="content">
         	<h4>Seminar</h4>
-            <form action="participate.php" method="post">
+            
+            
 		    <table>
+                <h4>Seminar</h4>
+
+                <form action="participationSeminar.php" method="post">
 			<tr>
 				<th>ID</th>
 				<th>Date</th>
@@ -81,7 +85,7 @@
                     <td><?php echo $rows['description']; ?></td>
                     <td><?php echo $rows['manager']; ?></td>
                     <td><?php echo $rows['Place']; ?></td>
-                    <td><input type="checkbox" id="<?php $rows['id'];?>"></td>
+                    <td><input type="submit" name="<?php echo $rows['id'];?>" value="Participate"></td>
                 </tr>
 				
                 <?php 
@@ -90,13 +94,15 @@
                 /*mysqli_close($conn);*/
 				?>
 
+                
                 </form>
-
-
 
 			</tr>
 			
 		    </table>
+            <form action="addEvent.php" method="post">
+                <input class="addEvent" type="submit" name="add" value="Add Event">
+            </form>
         </div>
         
 
