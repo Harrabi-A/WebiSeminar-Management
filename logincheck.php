@@ -13,7 +13,6 @@ if ($_POST['email'] && $_POST['password']) {
         $query = "SELECT * FROM USER WHERE email='$email' AND password='$userpass' ";
         echo "$query";
         $result = mysqli_query($conn,$query);
-        /*$row=mysqli_fetch_assoc($result);*/
         if($rows=mysqli_fetch_assoc($result)){
             $_SESSION["user"]=$email;
             // Login succeed, session variable updated succefully, ready for redirecting
