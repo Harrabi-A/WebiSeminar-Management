@@ -4,8 +4,7 @@ if (isset($_SESSION['user'])) {
 	header("Location: home.php");
 }
 if ($_POST['email'] && $_POST['password'] && $_POST['name'] && $_POST['surname']) {
-	# code...
-
+    
     $email = trim($_POST['email']);
     $userpass = trim($_POST['password']);
     $name = trim($_POST['name']);
@@ -29,6 +28,7 @@ if ($_POST['email'] && $_POST['password'] && $_POST['name'] && $_POST['surname']
     	$_SESSION['user']=$email;
     	header("Location: home.php");
     }
-    header("Location: signup.php");
+
 }
+header("Location: signup.php");
 ?>
