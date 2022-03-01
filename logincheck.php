@@ -19,7 +19,6 @@ if ($_POST['email'] && $_POST['password']) {
         }
         mysqli_close($conn);
         
-}else{
-header("Location: login.php");
 }
+header("Location: login.php");
 ?>
