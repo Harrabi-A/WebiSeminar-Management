@@ -69,7 +69,7 @@
                 $conn = mysqli_connect($host,$user,$password,$database);
 
             
-    	        $query = "SELECT * FROM SEMINAR";
+    	        $query = "SELECT * FROM SEMINAR WHERE date>current_date()";
     	        $result = mysqli_query($conn,$query);
 
                 ?>
