@@ -29,6 +29,7 @@ if ($_POST['email'] && $_POST['password'] && $_POST['name'] && $_POST['surname']
     	header("Location: home.php");
     }
 
-}
+}else{
 header("Location: signup.php");
+}
 ?>
