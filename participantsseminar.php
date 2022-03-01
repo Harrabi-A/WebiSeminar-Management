@@ -25,7 +25,7 @@ if (!isset($_SESSION['user'])) {
            		    <li><a href="seminar.php">Seminar</a></li>
            		    <li><a href="webinar.php">Webinar</a></li>
                     <li><a href="project.php">Project</a></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="home.php">Home</a></li>
                 </ul>
             </div>
         </div>
