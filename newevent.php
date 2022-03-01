@@ -38,7 +38,8 @@ if ($_POST['eventType'] && $_POST['date'] && $_POST['title'] && $_POST['adress']
     mysqli_query($conn,$query3);
 
     header("Location: home.php");
-}
+}else{
 
 header("Location: addEvent.php");
+}
 ?>
