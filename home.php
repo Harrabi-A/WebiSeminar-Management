@@ -32,7 +32,7 @@ if (!isset($_SESSION['user'])) {
         </div>
         <div>
             <div class="content">
-            <h4>Welcome <?php echo $_SESSION['user']; ?> <br><br>Your events:</h4>
+            <h4>Welcome <?php echo $_SESSION['user']; ?> <br><br><br><br>Your events:</h4>
             <table>
             <form action="removeSeminar.php" method="post">
             <tr>
@@ -115,6 +115,10 @@ if (!isset($_SESSION['user'])) {
             </tr>
             
             </table>
+
+            <form action="seminarmanager.php" method="post">
+                <input class="addEvent" type="submit" name="add" value="Your organized events">
+            </form>
         </div>
         </div>
     </div>
