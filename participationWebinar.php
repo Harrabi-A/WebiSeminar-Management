@@ -18,8 +18,9 @@ $database="WebSeminar";
 // Create connection
 $conn = mysqli_connect($host,$user,$password,$database);
 $query = "INSERT INTO PARTICIPATIONWEBINAR (email,id) VALUES ('$email','$eventID')";
-echo "$query";
 $result = mysqli_query($conn,$query,MYSQLI_STORE_RESULT);
-}
+header("Location: home.php");
+}else{
 header("Location: login.php");
+}
 ?>
