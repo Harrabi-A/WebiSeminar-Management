@@ -67,7 +67,7 @@
                 $conn = mysqli_connect($host,$user,$password,$database);
 
             
-    	        $query = "SELECT * FROM WEBINAR";
+    	        $query = "SELECT * FROM WEBINAR WHERE date>current_date()";
     	        $result = mysqli_query($conn,$query);
 
                 ?>
