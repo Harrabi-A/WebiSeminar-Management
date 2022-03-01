@@ -4,7 +4,6 @@ if (isset($_SESSION['user'])) {
 	
 
 $keys=array_keys($_POST);
-print_r($keys);
 
 $eventID=$keys['0'];
 $email=$_SESSION['user'];
