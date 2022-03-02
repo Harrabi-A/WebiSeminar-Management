@@ -6,7 +6,7 @@ if (!isset($_SESSION['user'])) {
     header("Location: login.php");
 }
 //check if post is done correctly
-if(!isset($_POST['0'])){
+if(!$_POST){
     header("Location: seminarmanager.php");
 }
 ?>
