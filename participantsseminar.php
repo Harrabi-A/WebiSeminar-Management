@@ -5,6 +5,10 @@ session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
 }
+//check if post is done correctly
+if(!isset($_POST['0'])){
+    header("Location: seminarmanager.php");
+}
 ?>
 
 <!DOCTYPE html>
