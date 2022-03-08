@@ -23,7 +23,6 @@ if ($rows=mysqli_fetch_assoc($result)) {
 }else{
 	// the user  is participant
 	$query3= "DELETE FROM PARTICIPATIONSEMINAR WHERE id='$eventID' AND email='$email'";
-	echo "$query3";
 	$result3 = mysqli_query($conn,$query3,MYSQLI_STORE_RESULT);
 	header("Location: home.php");
 }
